@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}} - {{NAME}}</title>
+<style>
+  :root {
+    --accent: #0e7490;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, #0f172a, #0e7490);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    max-width: 380px;
+    width: 100%;
+    padding: 28px 26px 22px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--accent);
+    background: #ecfeff;
+    padding: 5px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 22px;
+    color: var(--text);
+  }
+  .id-tag {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    font-family: ui-monospace, monospace;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-top: 1px solid #eef2f6;
+    font-size: 14px;
+  }
+  .label { color: var(--muted); }
+  .value { color: var(--text); font-weight: 600; text-align: right; }
+  .footer {
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">VERIFIED</span>
+    <h1>{{NAME}}</h1>
+    <div class="id-tag">ID: {{ID}}</div>
+    {{ROWS}}
+    <div class="footer">Generated {{GENERATED}}</div>
+  </div>
+</body>
+</html>
